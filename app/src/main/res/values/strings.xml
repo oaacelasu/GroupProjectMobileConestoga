@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Final project</string>
+    <string name="home_nav_title">Oscar Acelas</string>
+    <string name="home_nav_subtitle">Final project</string>
+    <string name="products_lbl">Products</string>
+    <string name="orders_lbl">Orders</string>
+
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Product Price</string>
+    <string name="product_description">Product Description</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="buy_now">Buy Now</string>
+
+
+    <string name="checkout_lbl">Checkout</string>
+    <string name="shipping_lbl">Shipping</string>
+    <string name="payment_lbl">Payment</string>
+
+    <string name="address_hint">Address</string>
+    <string name="city_hint">City</string>
+    <string name="state_hint">State</string>
+    <string name="zip_hint">Zip</string>
+    <string name="place_order_btn">Place Order</string>
+
+    <string name="card_number_hint">Card Number</string>
+    <string name="card_name_hint">Name on Card</string>
+    <string name="card_exp_hint">Expiration Date</string>
+    <string name="card_cvv_hint">CVV</string>
+
+    <string name="product_a_name">Taco al pastor</string>
+    <string name="product_a_description">The taco is a very popular culinary preparation in Mexico that consists of a tortilla, usually corn, which is folded or rolled to contain various ingredients and some type of sauce.</string>
+    <string name="product_a_price">$10.00</string>
+    <string name="return_to_home">Return to Home</string>
+    <string name="order_confirmation">Order Confirmation</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="title_activity_auth">Watchkeep</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="return_button">Return</string>
+    <string name="sign_in_error_message">Email or password is incorrect</string>
+    <string name="sign_up_error_message">There was an error signing up. Please try again.</string>
+    <string name="sign_in_success">Sign in success</string>
+    <string name="sign_up_success">Sign up success</string>
+
+    <string name="title_activity_sign_up">El Nopal SignUp</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="password_confirm_hint">Confirm your password</string>
+    <string name="product_model_placeholder">Fenix</string>
+    <string name="product_description_placeholder">"The iconic Rolex Submariner features a stainless steel case and bracelet, black dial with luminescent hands and hour markers, and a reliable automatic movement. "</string>
+    <string name="product_price_placeholder">$1000</string>
+    <string name="guest">Guest</string>
+</resources>

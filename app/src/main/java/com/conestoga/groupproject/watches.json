@@ -1,0 +1,142 @@
+[
+  {
+    "brand": "Rolex",
+    "description": "The classic Rolex Explorer features a stainless steel case and bracelet, black dial with luminous hour markers and a 3132 movement.",
+    "image": "gs://mobile-conestoga.appspot.com/explorer.jpeg",
+    "model": "Explorer",
+    "price": 7500
+  },
+  {
+    "brand": "Rolex",
+    "description": "The iconic Rolex Submariner features a stainless steel case and bracelet, black dial with luminescent hands and hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/submariner.jpeg",
+    "model": "Submariner",
+    "price": 9000
+  },
+  {
+    "brand": "Omega",
+    "description": "The sleek Omega Seamaster features a stainless steel case, black dial with white hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/seamaster.jpeg",
+    "model": "Seamaster",
+    "price": 6000
+  },
+  {
+    "brand": "Tag Heuer",
+    "description": "The stylish Tag Heuer Carrera features a stainless steel case and bracelet, black dial with white hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/carrera.jpeg",
+    "model": "Carrera",
+    "price": 5500
+  },
+  {
+    "brand": "Breitling",
+    "description": "The rugged Breitling Navitimer features a stainless steel case and bracelet, black dial with luminescent hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/navitimer.jpeg",
+    "model": "Navitimer",
+    "price": 8500
+  },
+  {
+    "brand": "Patek Philippe",
+    "description": "The sophisticated Patek Philippe Calatrava features a white gold case, white dial with black hour markers, and a manual winding movement.",
+    "image": "gs://mobile-conestoga.appspot.com/calatrava.jpeg",
+    "model": "Calatrava",
+    "price": 35000
+  },
+  {
+    "brand": "Audemars Piguet",
+    "description": "The bold Audemars Piguet Royal Oak features a stainless steel case and bracelet, blue dial with white hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/royal_oak.jpeg",
+    "model": "Royal Oak",
+    "price": 20000
+  },
+  {
+    "brand": "IWC",
+    "description": "The elegant IWC Portofino features a stainless steel case and bracelet, silver dial with black hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/portofino.jpeg",
+    "model": "Portofino",
+    "price": 10000
+  },
+  {
+    "brand": "Panerai",
+    "description": "The rugged Panerai Luminor features a stainless steel case and bracelet, black dial with luminescent hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/luminor.jpeg",
+    "model": "Luminor",
+    "price": 12000
+  },
+  {
+    "brand": "Jaeger-LeCoultre",
+    "description": "The classic Jaeger-LeCoultre Master Control features a stainless steel case and bracelet, black dial with white hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/master_control.jpeg",
+    "model": "Master Control",
+    "price": 15000
+  },
+  {
+    "brand": "Cartier",
+    "description": "The elegant Cartier Tank features a stainless steel case and bracelet, silver dial with black hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/tank.jpeg",
+    "model": "Tank",
+    "price": 8000
+  },
+  {
+    "brand": "Hublot",
+    "description": "The bold Hublot Big Bang features a stainless steel case and bracelet, black dial with white hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/big_bang.jpeg",
+    "model": "Big Bang",
+    "price": 15000
+  },
+  {
+    "brand": "Vacheron Constantin",
+    "description": "The classic Vacheron Constantin Patrimony features a stainless steel case and bracelet, silver dial with black hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/patrimony.jpeg",
+    "model": "Patrimony",
+    "price": 20000
+  },
+  {
+    "brand": "Chopard",
+    "description": "The elegant Chopard Happy Sport features a stainless steel case, white dial with diamond hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/happy_sport.jpeg",
+    "model": "Happy Sport",
+    "price": 12000
+  },
+  {
+    "brand": "Cartier",
+    "description": "The iconic Cartier Santos features a stainless steel case, white dial with blue hands and hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/santos.jpeg",
+    "model": "Santos",
+    "price": 11000
+  },
+  {
+    "brand": "Panerai",
+    "description": "The bold Panerai Luminor features a stainless steel case and bracelet, black dial with luminescent hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/luminor.jpeg",
+    "model": "Luminor",
+    "price": 9000
+  },
+  {
+    "brand": "Hublot",
+    "description": "The sporty Hublot Big Bang features a black ceramic case, black dial with luminescent hour markers, and a reliable automatic movement.",
+    "image": "gs://mobile-conestoga.appspot.com/big_bang.jpeg",
+    "model": "Big Bang",
+    "price": 15000
+  },
+  {
+    "brand": "Tissot",
+    "description": "The stylish Tissot T-Classic features a stainless steel case, white dial with black hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/t_classic.jpeg",
+    "model": "T-Classic",
+    "price": 2000
+  },
+  {
+    "brand": "Longines",
+    "description": "The timeless Longines Conquest features a stainless steel case, black dial with luminescent hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/conquest.jpeg",
+    "model": "Conquest",
+    "price": 4000
+  },
+  {
+    "brand": "Maurice Lacroix",
+    "description": "The sleek Maurice Lacroix Eliros features a stainless steel case, white dial with black hour markers, and a quartz movement.",
+    "image": "gs://mobile-conestoga.appspot.com/eliros.jpeg",
+    "model": "Eliros",
+    "price": 3000
+  }
+]

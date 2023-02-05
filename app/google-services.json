@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "672789020915",
+    "firebase_url": "https://mobile-conestoga-default-rtdb.firebaseio.com",
+    "project_id": "mobile-conestoga",
+    "storage_bucket": "mobile-conestoga.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672789020915:android:a6a6b0ebdb6240924d3786",
+        "android_client_info": {
+          "package_name": "com.conestoga.groupproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672789020915-g883fkl09kujfk8r20n4amok230cdv32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWjVKS9UAXq6fM3y0kf89eDlJ2SJdq0i0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672789020915-g883fkl09kujfk8r20n4amok230cdv32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672789020915:android:6ed06156af6c6b084d3786",
+        "android_client_info": {
+          "package_name": "com.example.week4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672789020915-g883fkl09kujfk8r20n4amok230cdv32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWjVKS9UAXq6fM3y0kf89eDlJ2SJdq0i0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672789020915-g883fkl09kujfk8r20n4amok230cdv32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

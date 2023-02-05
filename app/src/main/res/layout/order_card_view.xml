@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout>
+    <data>
+        <variable
+            name="item"
+            type="com.conestoga.groupproject.data.entities.AppOrder" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/itemClickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:backgroundTint="@color/md_theme_light_surfaceVariant"
+        app:borderWidth="0dp"
+        app:strokeColor="@color/md_theme_light_surfaceVariant"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvOrderName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="@{item.items[0].product.model}"
+                android:textColor="@color/md_theme_light_onSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/product_a_name" />
+
+            <TextView
+                android:id="@+id/tvOrderQuantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textSize="14sp"
+                app:quantity="@{item.items[0].quantity}"
+                android:textColor="@color/md_theme_light_onSurfaceVariant"
+                app:layout_constraintEnd_toStartOf="@id/tvOrderTotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="5 Units" />
+
+
+            <TextView
+                android:id="@+id/tvOrderTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:price="@{item.totalPrice}"
+                android:textColor="@color/md_theme_light_onSurfaceVariant"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderName"
+                tools:text="@string/product_a_price" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
