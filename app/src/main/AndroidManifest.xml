@@ -8,43 +8,64 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:screenOrientation="portrait"
         tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".SignUpActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_sign_up"-->
+<!--            android:theme="@style/AppTheme.NoActionBar" />-->
+<!--        <activity-->
+<!--            android:name=".SignInActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_sign_in"-->
+<!--            android:theme="@style/AppTheme.NoActionBar" />-->
+
         <activity
-            android:name=".view.orders.OrdersActivity"
-            android:exported="false"
-            android:parentActivityName=".view.MainActivity"
-            />
-        <activity
-            android:name=".view.MainActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".view.checkout.ConfirmationActivity"
-            android:exported="false"
-            />
-        <activity
-            android:name=".view.checkout.ProductDetail"
-            android:exported="false"
-            android:parentActivityName=".view.MainActivity"
-            />
-        <activity
-            android:name=".view.checkout.CheckoutActivity"
-            android:exported="false"
-            android:parentActivityName=".view.MainActivity"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".view.auth.AuthActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".view.auth.SignInActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.auth.SignUpActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.orders.OrdersActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.checkout.ConfirmationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.checkout.ProductDetail"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.checkout.CheckoutActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+<!--        <activity-->
+<!--            android:name=".view.auth.AuthActivity"-->
+<!--            android:exported="true"-->
+<!--            android:windowSoftInputMode="adjustResize">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
     </application>
 
 </manifest>
