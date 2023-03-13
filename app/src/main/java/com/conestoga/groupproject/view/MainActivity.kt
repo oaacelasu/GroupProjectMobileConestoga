@@ -3,17 +3,20 @@ package com.conestoga.groupproject.view
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import com.conestoga.groupproject.R
 import com.conestoga.groupproject.data.entities.AppOrder
 import com.conestoga.groupproject.data.entities.Product
-import com.conestoga.groupproject.data.entities.User
 import com.conestoga.groupproject.databinding.ActivityMainBinding
 import com.conestoga.groupproject.databinding.ProductCardViewBinding
 import com.conestoga.groupproject.view.adapters.GenericFirebaseAdapter
 import com.conestoga.groupproject.view.adapters.WrapContentLinearLayoutManager
+import com.conestoga.groupproject.view.auth.SignInActivity
 import com.conestoga.groupproject.view.checkout.ProductDetail
 import com.conestoga.groupproject.view.orders.OrdersActivity
 import com.firebase.ui.database.FirebaseRecyclerOptions
@@ -32,6 +35,9 @@ class MainActivity : AppCompatActivity() {
 
     private var orders: MutableList<AppOrder> = mutableListOf()
 
+    // alert dialog reference
+    private var alertDialog: AlertDialog? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,19 +47,15 @@ class MainActivity : AppCompatActivity() {
         val query = FirebaseDatabase.getInstance().reference.child("watches")
         val options =
             FirebaseRecyclerOptions.Builder<Product>().setQuery(query, Product::class.java).build()
-//        binding.user = intent.getSerializableExtra("user") as User
-
-        val user = FirebaseAuth.getInstance().currentUser
+        binding.user = FirebaseAuth.getInstance().currentUser
 
         binding.ivBell.setOnClickListener {
             val intent = Intent(this, OrdersActivity::class.java)
-//            intent.putExtra("userId", binding.user?.id)
-            intent.putExtra("userId", user?.uid)
+            intent.putExtra("userId", binding.user?.uid)
             startActivity(intent)
         }
 
-//        listenForOrders(binding.user?.id.toString())
-        listenForOrders(user?.uid.toString())
+        listenForOrders(binding.user?.uid.toString())
 
         binding.rvProducts.apply {
             layoutManager = WrapContentLinearLayoutManager(this@MainActivity)
@@ -66,8 +68,42 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // bind profile alert dialog
+    private fun bindProfileDialog() {
+        // Create a new AlertDialog Builder
+        val builder = AlertDialog.Builder(this)
 
-    private fun listenForOrders(userId :String) {
+        // Inflate the logout_dialog layout
+        val dialogView = layoutInflater.inflate(R.layout.fragment_profile_dialog, null)
+
+        // Set the title and subtitle
+        dialogView.findViewById<TextView>(R.id.dialog_name).text =  binding.user?.displayName
+        dialogView.findViewById<TextView>(R.id.dialog_email).text =  binding.user?.email
+
+
+        // Set the Back button click listener
+        dialogView.findViewById<Button>(R.id.back_button).setOnClickListener {
+            alertDialog?.dismiss() // Dismiss the dialog
+        }
+
+        // Set the Logout button click listener
+        dialogView.findViewById<Button>(R.id.logout_button).setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(this, SignInActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
+        // Set the custom view for the AlertDialog
+        builder.setView(dialogView)
+
+        // Create the AlertDialog
+        alertDialog = builder.create()
+
+    }
+
+
+    private fun listenForOrders(userId: String) {
         val query = FirebaseDatabase.getInstance().reference.child("orders/$userId")
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -91,19 +127,25 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         //log the adapter
         mAdapter?.startListening()
+        bindProfileDialog()
+        binding.ivAvatar.setOnClickListener {
+            // Show the dialog
+            alertDialog?.show()
+        }
     }
 
     override fun onStop() {
         super.onStop()
         mAdapter?.stopListening()
+        alertDialog?.cancel()
+        alertDialog = null
+
     }
 
     override fun onDestroy() {
         super.onDestroy()
         mAdapter = null
+        alertDialog?.cancel()
+        alertDialog = null
     }
-}
-
-private fun Intent.putExtra(s: String, orders: MutableList<AppOrder>) {
-    this.putExtra(s, orders)
 }

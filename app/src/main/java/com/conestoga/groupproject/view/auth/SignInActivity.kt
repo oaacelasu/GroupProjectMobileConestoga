@@ -26,29 +26,32 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.button.setOnClickListener {
-//            Toast.makeText(this, "Button Clicked..!!", Toast.LENGTH_SHORT).show()
-
-            val email = binding.emailEt.text.toString()
-            val pass = binding.passET.text.toString()
-
-            if (email.isNotEmpty() && pass.isNotEmpty()) {
-
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
-
-                    }
-                }
-            } else {
-                Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
-
-            }
+            handleLogin(binding.emailEt.text.toString(), binding.passET.text.toString())
         }
     }
 
+    private fun handleLogin(email: String, password: String) {
+        if (email.isNotEmpty() && password.isNotEmpty()) {
+
+            firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    val intent = Intent(this, MainActivity::class.java)
+                    /*
+                    intent.putExtra("user", User(it.result?.user?.uid ?: "",
+                        it.result?.user?.displayName ?: "", it.result?.user?.email.toString()))
+
+                     */
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+                }
+            }
+        } else {
+            Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
+
+        }
+    }
     override fun onStart() {
         super.onStart()
 

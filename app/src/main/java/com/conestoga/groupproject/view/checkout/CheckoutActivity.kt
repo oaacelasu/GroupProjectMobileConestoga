@@ -6,11 +6,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
 import com.conestoga.groupproject.data.entities.AppOrder
 import com.conestoga.groupproject.data.entities.OrderItem
 import com.conestoga.groupproject.data.entities.Product
 import com.conestoga.groupproject.databinding.ActivityCheckoutBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 class CheckoutActivity : AppCompatActivity() {
@@ -90,7 +90,7 @@ class CheckoutActivity : AppCompatActivity() {
                     quantity * product!!.price
                 )
 
-                addOrder(order, "guest")
+                addOrder(order, FirebaseAuth.getInstance().currentUser?.uid ?: "guest")
                 finish()
                 val intent = Intent(this@CheckoutActivity, ConfirmationActivity::class.java)
                 intent.putExtra("order", order)
