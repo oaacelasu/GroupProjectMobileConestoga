@@ -15,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "672789020915-g883fkl09kujfk8r20n4amok230cdv32.apps.googleusercontent.com",
+          "client_id": "672789020915-483e8pgdj86gig4704g2217ehkama6f6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.conestoga.groupproject",
+            "certificate_hash": "425fd57c41ac368339bff8b0c811c0b6c8061895"
+          }
+        },
+        {
+          "client_id": "672789020915-i42k6eah07imdefiuqil9k59hcecghc2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -44,7 +52,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "672789020915-g883fkl09kujfk8r20n4amok230cdv32.apps.googleusercontent.com",
+          "client_id": "672789020915-i42k6eah07imdefiuqil9k59hcecghc2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

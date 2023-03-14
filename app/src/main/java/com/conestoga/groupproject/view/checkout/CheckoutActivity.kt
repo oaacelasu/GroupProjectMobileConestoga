@@ -112,7 +112,6 @@ class CheckoutActivity : AppCompatActivity() {
             btnPlaceOrder.isEnabled = isValid
             btnPlaceOrder.alpha = if (isValid) 1f else 0.5f
         }
-
     }
 
     private fun addOrder(order: AppOrder, userId: String) {
