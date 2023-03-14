@@ -18,7 +18,7 @@ class ConfirmationActivity : AppCompatActivity() {
         supportActionBar?.hide()
         val orderData: AppOrder = intent.getSerializableExtra("order") as AppOrder
         val tvConfirmation: TextView = findViewById(R.id.tvConfirmationText)
-        tvConfirmation.text = orderData.toString()
+        tvConfirmation.text = "Your order placed successfully. Thank you for your order!" //orderData.toString()
         findViewById<View>(R.id.btnReturnToMain).setOnClickListener {
             finish()
             startActivity(
